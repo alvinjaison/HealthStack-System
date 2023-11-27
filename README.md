@@ -71,12 +71,28 @@
 #### [xhtml2pdf](https://xhtml2pdf.readthedocs.io/en/latest/usage.html) - to generate and download pdf documents.
 
 ## Installation Details
-      1) Create an environment to run django project  
+      1) Create an environment to run django project 
       2) Migrate to create dbsqlite database 
       3) Look for .env.example and settings.py files to see what credentials to set up, and then create .env files
       
       The credentials that you need to set up are: Mailtrap credentials, SSLCommerz Credentials. 
 
+## Steps to start the app
+      1) Start python virtual env
+            python -m venv venv
+      2) Activate the virtual environment venv
+            source venv/bin/activate
+      3) Install python pip paclages
+            pip install -r requirements
+      4) Create .env from  .env.example and add secret key
+            cp .env.example .env
+      5) Upgrade django framework
+            pip install --upgrade djangorestframework-simplejwt
+      6) Migrate DB 
+            python manage.py migrate
+      7) Start the application
+            python manage.py runserver
+            
 
 # MKDocs Documentation and Youtube Video
 - [Youtube](https://youtu.be/TSR00OKBSCY) video link of MKDocs documentation on our Healthstack project.
